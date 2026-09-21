@@ -11,7 +11,7 @@ export function AppProvider({ children }) {
   const [products, setProducts] = useState([])
   const [specs, setSpecs] = useState([])
   const [user, setUser] = useState(null)
-  const API_URL = 'http://localhost:8000/api'
+  const API_URL = 'https://klangeo-backend.vercel.app/api'
 
   useEffect(() => {
     fetch(`${API_URL}/products`, {
