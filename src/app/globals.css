@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /* Colors */
+  --paper: #efede3;
+  --asphalt: #302f2c;
+  --blue: #471eec;
+  --purple: #ad5fff;
+
+  /* Transitions */
+  --transition-smooth: all 0.5s ease;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--paper);
+  transition: var(--transition-smooth);
+
+  scrollbar-width: auto;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  padding: 32px;
+  padding-top: calc(32px + 80px);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+main {
+  padding: 32px;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  justify-content: start;
+  transition: var(--transition-smooth);
+
+  * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+section {
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  >img {
+    position: absolute;
+    width: 100%;
+  }
+}
+
+div {
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+}
+
+article {
+  flex-direction: column;
+  align-items: start;
+
+  p {
+    color: var(--asphalt);
+  }
+}
+
+span {
+  flex-direction: row;
+  gap: 32px;
+}
+
+card {
+  width: calc(512px + 64px);
+  padding: 32px;
+  flex-direction: column;
+  gap: 32px;
+  background-color: var(--asphalt);
+  border-radius: 64px;
+
+  p {
+    color: var(--paper);
+  }
+}
+
+img {
+  max-width: 512px;
+  max-height: 512px;
+  border-radius: 32px;
+}
+
+button {
+  padding: 32px;
+  width: 256px;
+  height: 64px;
+  border-radius: 32px;
+  color: var(--paper) !important;
+  background-color: var(--asphalt);
+  transition: var(--transition-smooth);
+  border: none;
+
+  a {
+    font-size: 32px;
+    color: var(--paper);
+  }
+}
+
+button:hover {
+  background-color: var(--blue);
+  box-shadow: 0px 4px 16px var(--asphalt);
+  transform: scale(1.05);
+}
+
+ul,
+ol {
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+
+  &.none {
+    list-style: none;
+  }
+}
+
+li {
+  flex-direction: row;
+  gap: 8px;
+}
