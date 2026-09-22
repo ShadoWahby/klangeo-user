@@ -46,3 +46,4 @@ const Category = ({ params }) => {
 }
 
 export default Category
+export const dynamic = 'force-dynamic'

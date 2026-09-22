@@ -46,3 +46,4 @@ const Product = ({ params }) => {
 }
 
 export default Product
+export const dynamic = 'force-dynamic'
