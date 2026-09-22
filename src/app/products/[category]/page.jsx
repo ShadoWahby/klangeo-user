@@ -1,10 +1,9 @@
 'use client'
 
-import * as React from 'react'
 import { useApp } from '@/components/components'
 
-const Category = ({ params }) => {
-  const { category } = React.use(params)
+export default async function Category({ params }) {
+  const { category } = await params
   const { products } = useApp()
 
   if (category !== 'LIVE' && category !== 'PRODUCTION' && category !== 'STUDIO' && category !== 'RECORDING') {
@@ -44,6 +43,3 @@ const Category = ({ params }) => {
     </>
   )
 }
-
-export default Category
-export const dynamic = 'force-dynamic'

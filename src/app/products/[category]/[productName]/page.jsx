@@ -1,10 +1,9 @@
 'use client'
 
-import * as React from 'react'
 import { useApp } from '@/components/components'
 
-const Product = ({ params }) => {
-  const { productName } = React.use(params)
+export default async function Product({ params }) {
+  const { productName } = await params
   const spaceSeperatedName = productName.replace(/-/g, ' ')
   const { products, specs } = useApp()
   const product = products.find((p) => p.name.toLowerCase() === spaceSeperatedName.toLowerCase())
@@ -44,6 +43,3 @@ const Product = ({ params }) => {
     </>
   )
 }
-
-export default Product
-export const dynamic = 'force-dynamic'
