@@ -1,9 +1,10 @@
 'use client'
 
+import { use } from 'react';
 import { useApp } from '@/components/components'
 
-export default async function Product({ params }) {
-  const { productName } = await params
+export default function Product({ params }) {
+  const { productName } = use(params)
   const spaceSeperatedName = productName.replace(/-/g, ' ')
   const { products, specs } = useApp()
   const product = products.find((p) => p.name.toLowerCase() === spaceSeperatedName.toLowerCase())

@@ -1,9 +1,10 @@
 'use client'
 
+import { use } from 'react';
 import { useApp } from '@/components/components'
 
-export default async function Category({ params }) {
-  const { category } = await params
+export default function Category({ params }) {
+  const { category } = use(params)
   const { products } = useApp()
 
   if (category !== 'LIVE' && category !== 'PRODUCTION' && category !== 'STUDIO' && category !== 'RECORDING') {
