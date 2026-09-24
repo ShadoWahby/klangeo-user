@@ -28,7 +28,7 @@ const Products = () => {
                       <Link href={`/products/${product.category}/${product.name.toLowerCase().replace(/\s/g, '-')}`}>
                         <h4>{product.name}</h4>
                       </Link>
-                      <p>{product.price}</p>
+                      <p>${product.price}</p>
                       <p>{product.description}</p>
                     </div>
                   </card>

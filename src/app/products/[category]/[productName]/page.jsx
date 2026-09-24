@@ -27,7 +27,7 @@ export default function Product({ params }) {
         <card>
           <img src={`/products/${product.category}/${product.imageUrl}`} alt={product.name} />
           <div>
-            <p>{product.price}</p>
+            <p>${product.price}</p>
             <p>{product.description}</p>
           </div>
         </card>

@@ -34,7 +34,7 @@ export default function Category({ params }) {
               <img src={`/products/${product.category}/${product.imageUrl}`} alt={product.name} />
               <div>
                 <h4>{product.name}</h4>
-                <p>{product.price}</p>
+                <p>${product.price}</p>
                 <p>{product.description}</p>
               </div>
             </card>
