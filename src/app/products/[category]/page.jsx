@@ -1,7 +1,8 @@
 'use client'
 
-import { use } from 'react';
+import { use } from 'react'
 import { useApp } from '@/components/components'
+import Link from 'next/link'
 
 export default function Category({ params }) {
   const { category } = use(params)
