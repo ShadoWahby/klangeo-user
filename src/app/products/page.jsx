@@ -22,16 +22,16 @@ const Products = () => {
               {products
                 .filter(product => product.category === category)
                 .map(product => (
-                  <card key={product.id}>
-                    <img src={`/products/${product.category}/${product.imageUrl}`} alt={product.name} />
-                    <div>
-                      <Link href={`/products/${product.category}/${product.name.toLowerCase().replace(/\s/g, '-')}`}>
+                  <Link href={`/products/${product.category}/${product.name.toLowerCase().replace(/\s/g, '-')}`}>
+                    <card key={product.id}>
+                      <img src={`/products/${product.category}/${product.imageUrl}`} alt={product.name} />
+                      <div>
                         <h4>{product.name}</h4>
-                      </Link>
-                      <p>${product.price}</p>
-                      <p>{product.description}</p>
-                    </div>
-                  </card>
+                        <p>${product.price}</p>
+                        <p>{product.description}</p>
+                      </div>
+                    </card>
+                  </Link>
                 ))
               }
             </section>
