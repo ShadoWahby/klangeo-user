@@ -1,12 +1,14 @@
 'use client'
 
+import { useState } from 'react'
 import { useApp } from './components'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 export default function Navbar() {
-  const { user, login } = useApp()
+  const { isMobile, user, login } = useApp()
   const pathname = usePathname()
+  const [menu, setMenu] = useState(false)
 
   const links = [
     { name: 'Products', path: '/products' },
@@ -40,22 +42,39 @@ export default function Navbar() {
   return (
     <nav>
       {user ? account : google}
-      <ul>
-        {pathname === '/' ? (<></>) : (
-          <Link href="/">
-            <li className="Home">
-              <span className="material-symbols-rounded">Home</span>
-            </li>
-          </Link>
-        )}
-        {links.map((link) => (
-          <Link href={link.path} key={link.name}>
-            <li>
-              {link.name}
-            </li>
-          </Link>
-        ))}
-      </ul>
+      {isMobile ? (
+        <>
+          <li onClick={() => setMenu(!menu)}>
+            <span className="material-symbols-rounded">{menu ? 'Close' : 'Menu'}</span>
+          </li>
+          <menu className={menu ? 'open' : ''}>
+            {links.map((link) => (
+              <Link href={link.path} key={link.name}>
+                <li>
+                  {link.name}
+                </li>
+              </Link>
+            ))}
+          </menu>
+        </>
+      ) : (
+        <ul>
+          {pathname === '/' ? (<></>) : (
+            <Link href="/">
+              <li className="Home">
+                <span className="material-symbols-rounded">Home</span>
+              </li>
+            </Link>
+          )}
+          {links.map((link) => (
+            <Link href={link.path} key={link.name}>
+              <li>
+                {link.name}
+              </li>
+            </Link>
+          ))}
+        </ul>
+      )}
     </nav>
   )
 }

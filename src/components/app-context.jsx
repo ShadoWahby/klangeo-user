@@ -7,6 +7,7 @@ import Loading from '@/app/loading'
 const AppContext = createContext(null)
 
 export function AppProvider({ children }) {
+  const [isMobile, setIsMobile] = useState(false)
   const [loading, setLoading] = useState(true)
   const [products, setProducts] = useState([])
   const [specs, setSpecs] = useState([])
@@ -14,6 +15,12 @@ export function AppProvider({ children }) {
   const API_URL = 'https://klangeo-backend.vercel.app/api'
 
   useEffect(() => {
+    const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+    setIsMobile(isMobile)
+    if (isMobile) {
+      document.body.classList.add('mobile')
+    }
+
     fetch(`${API_URL}/products`, {
       headers: { 'Content-Type': 'application/json' },
     })
@@ -105,7 +112,7 @@ export function AppProvider({ children }) {
   }
 
   return (
-    <AppContext.Provider value={{ products, specs, user, login, logout, deleteUser, setLoading }}>
+    <AppContext.Provider value={{ isMobile, products, specs, user, login, logout, deleteUser, setLoading }}>
       {children}
     </AppContext.Provider>
   )

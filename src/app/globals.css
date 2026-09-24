@@ -150,3 +150,14 @@ li {
   flex-direction: row;
   gap: 8px;
 }
+
+/* Mobile Responsive */
+body.mobile {
+  span {
+    flex-direction: column;
+  }
+
+  card {
+    width: calc(256px + 64px) !important;
+  }
+}
