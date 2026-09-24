@@ -2,23 +2,19 @@ const About = () => {
   const team = [
     {
       name: 'Younis Wahby',
-      role: 'Founder, CEO, Audio Hardware and Software Engineer',
+      role: 'Co-Founder, CEO, CTO',
     },
     {
       name: 'Brian Riad',
-      role: 'Co-Founder, CHRO',
-    },
-    {
-      name: 'Moussa Aboubasha',
-      role: 'Co-Founder, CPO',
+      role: 'Co-Founder, CBO, CHRO, CPO',
     },
     {
       name: 'Mohamed Askar',
-      role: 'Co-Founder, CMO',
+      role: 'CMO',
     },
     {
       name: 'Seif Ibrahim',
-      role: 'Co-Founder, CFO'
+      role: 'CFO'
     },
   ]
 
