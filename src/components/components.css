@@ -93,7 +93,7 @@ body.mobile {
       border-radius: 12px;
     }
 
-    ul {
+    ul.desktop {
       display: none;
     }
 

@@ -67,7 +67,7 @@ export default function Navbar() {
           </menu>
         </>
       ) : (
-        <ul>
+        <ul className='desktop'>
           {pathname === '/' ? (<></>) : (
             <Link href="/">
               <li className="Home">
