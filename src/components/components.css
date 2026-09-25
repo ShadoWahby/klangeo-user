@@ -121,6 +121,15 @@ body.mobile {
       transition: var(--transition-smooth);
       box-shadow: 0 0 16px var(--asphalt), inset 0 0 8px var(--asphalt);
     }
+
+    menu::backdrop {
+      opacity: 0;
+      transition: var(--transition-smooth);
+    }
+
+    menu.open::backdrop {
+      opacity: 0.5;
+    }
   }
 
   footer {
