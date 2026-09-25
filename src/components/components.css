@@ -109,6 +109,7 @@ body.mobile {
     }
 
     menu.open {
+      z-index: 200;
       top: 64px;
       left: 0;
       position: absolute;
@@ -123,6 +124,8 @@ body.mobile {
     }
 
     menu::backdrop {
+      background-color: var(--asphalt);
+      backdrop-filter: blur(8px);
       opacity: 0;
       transition: var(--transition-smooth);
     }
