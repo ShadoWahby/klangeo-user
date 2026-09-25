@@ -124,13 +124,13 @@ body.mobile {
     }
 
     menu::backdrop {
-      background-color: var(--asphalt);
-      backdrop-filter: blur(8px);
       opacity: 0;
       transition: var(--transition-smooth);
     }
 
     menu.open::backdrop {
+      background-color: var(--asphalt);
+      backdrop-filter: blur(8px);
       opacity: 0.5;
     }
 
