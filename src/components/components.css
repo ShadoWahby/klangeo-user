@@ -109,7 +109,7 @@ body.mobile {
     }
 
     menu.open {
-      top: 80px;
+      top: 64px;
       left: 0;
       position: absolute;
       width: 100vw;
