@@ -47,6 +47,13 @@ export default function Navbar() {
           <li onClick={() => setMenu(!menu)}>
             <span className="material-symbols-rounded">{menu ? 'Close' : 'Menu'}</span>
           </li>
+          {pathname === '/' ? (<></>) : (
+            <Link href="/">
+              <li className="Home">
+                <span className="material-symbols-rounded">Home</span>
+              </li>
+            </Link>
+          )}
           <menu className={menu ? 'open' : ''}>
             {links.map((link) => (
               <Link href={link.path} key={link.name}>
