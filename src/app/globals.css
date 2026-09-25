@@ -151,7 +151,7 @@ li {
   gap: 8px;
 }
 
-/* Mobile Responsive */
+/* Mobile */
 body.mobile {
   span {
     flex-direction: column;
@@ -159,5 +159,15 @@ body.mobile {
 
   card {
     width: calc(256px + 64px) !important;
+  }
+
+  img {
+    max-width: 256px;
+    max-height: 256px;
+  }
+
+  button {
+    width: 128px;
+    height: 32px;
   }
 }

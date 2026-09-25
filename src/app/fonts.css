@@ -87,3 +87,39 @@ a {
     'GRAD' 0,
     'opsz' 24
 }
+
+/* Mobile */
+body.mobile {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h4 {
+    font-size: 12px;
+  }
+
+  h5 {
+    font-size: 8px;
+  }
+
+  h6 {
+    font-size: 4px;
+  }
+
+  p,
+  a,
+  button,
+  li,
+  input,
+  textarea {
+    font-size: 12px;
+  }
+}
