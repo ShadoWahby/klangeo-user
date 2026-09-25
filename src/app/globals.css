@@ -153,10 +153,6 @@ li {
 
 /* Mobile */
 body.mobile {
-  header {
-    padding-top: calc(32px + 64px);
-  }
-
   span {
     flex-direction: column;
   }
@@ -168,10 +164,5 @@ body.mobile {
   img {
     max-width: 256px;
     max-height: 256px;
-  }
-
-  button {
-    width: 128px;
-    height: 32px;
   }
 }

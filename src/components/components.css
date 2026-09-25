@@ -83,34 +83,13 @@ footer {
 
 body.mobile {
   nav {
-    height: 64px;
-    border-radius: 0 0 32px 32px;
-
-    svg,
-    img {
-      width: 24px;
-      height: 24px;
-      border-radius: 12px;
-    }
-
-    ul.desktop {
-      display: none;
-    }
-
-    li {
-      min-width: 32px;
-      height: 32px;
-      padding: 0 8px;
-      border-radius: 16px;
-    }
-
     menu {
       display: none;
     }
 
     menu.open {
       z-index: 200;
-      top: 64px;
+      top: 80px;
       left: 0;
       position: absolute;
       width: 100vw;
@@ -132,10 +111,6 @@ body.mobile {
       background-color: var(--asphalt);
       backdrop-filter: blur(8px);
       opacity: 0.5;
-    }
-
-    .Account {
-      padding: 0 8px 0 8px;
     }
   }
 
