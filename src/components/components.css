@@ -83,8 +83,24 @@ footer {
 
 body.mobile {
   nav {
+    height: 64px;
+    border-radius: 0 0 32px 32px;
+
+    svg,
+    img {
+      width: 24px;
+      height: 24px;
+      border-radius: 12px;
+    }
+
     ul {
       display: none;
+    }
+
+    li {
+      min-width: 32px;
+      height: 32px;
+      border-radius: 16px;
     }
 
     menu {

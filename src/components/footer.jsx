@@ -12,7 +12,7 @@ export default function Footer() {
       </span>
       <span>
         <ul>
-          <h2>Contact Us</h2>
+          <h3>Contact Us</h3>
           <li>
             <span className="material-symbols-rounded">mail</span>
             <a href="mailto:support@klangeo.com" className="hyperlink">
@@ -27,7 +27,7 @@ export default function Footer() {
           </li>
         </ul>
         <ul>
-          <h2>Links</h2>
+          <h3>Links</h3>
           <li>
             <Link href="/about">
               <span className="material-symbols-rounded">info</span>

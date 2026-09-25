@@ -44,16 +44,18 @@ export default function Navbar() {
       {user ? account : google}
       {isMobile ? (
         <>
-          <li onClick={() => setMenu(!menu)}>
-            <span className="material-symbols-rounded">{menu ? 'Close' : 'Menu'}</span>
-          </li>
-          {pathname === '/' ? (<></>) : (
-            <Link href="/">
-              <li className="Home">
-                <span className="material-symbols-rounded">Home</span>
-              </li>
-            </Link>
-          )}
+          <ul>
+            {pathname === '/' ? (<></>) : (
+              <Link href="/">
+                <li className="Home">
+                  <span className="material-symbols-rounded">Home</span>
+                </li>
+              </Link>
+            )}
+            <li onClick={() => setMenu(!menu)}>
+              <span className="material-symbols-rounded">{menu ? 'Close' : 'Menu'}</span>
+            </li>
+          </ul>
           <menu className={menu ? 'open' : ''}>
             {links.map((link) => (
               <Link href={link.path} key={link.name}>

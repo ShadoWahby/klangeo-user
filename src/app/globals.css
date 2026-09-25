@@ -153,6 +153,10 @@ li {
 
 /* Mobile */
 body.mobile {
+  header {
+    padding-top: calc(32px + 64px);
+  }
+
   span {
     flex-direction: column;
   }

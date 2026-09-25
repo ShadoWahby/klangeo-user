@@ -119,7 +119,8 @@ body.mobile {
   button,
   li,
   input,
-  textarea {
+  textarea,
+  span {
     font-size: 12px;
   }
 }
