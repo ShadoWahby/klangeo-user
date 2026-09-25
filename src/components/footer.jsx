@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer>
       <span>
-        <ReactSVG src="../icon.svg" />
+        <ReactSVG src="/logo.svg" />
         <h2>© 2026<br />Klangeo</h2>
       </span>
       <span>
@@ -22,7 +22,7 @@ export default function Footer() {
           <li>
             <span className="material-symbols-rounded">call</span>
             <Link href="/phone" className="hyperlink">
-              Call Us from 30+ countries
+              Call Us
             </Link>
           </li>
         </ul>
