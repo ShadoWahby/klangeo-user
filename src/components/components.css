@@ -133,6 +133,10 @@ body.mobile {
     menu.open::backdrop {
       opacity: 0.5;
     }
+
+    .Account {
+      padding: 0 8px 0 8px;
+    }
   }
 
   footer {
